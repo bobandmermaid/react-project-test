@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-project-test/static/css/main.21c70db9.chunk.css",
+    "main.js": "/react-project-test/static/js/main.9644718a.chunk.js",
+    "main.js.map": "/react-project-test/static/js/main.9644718a.chunk.js.map",
+    "runtime-main.js": "/react-project-test/static/js/runtime-main.6f937617.js",
+    "runtime-main.js.map": "/react-project-test/static/js/runtime-main.6f937617.js.map",
+    "static/js/2.a7f3a084.chunk.js": "/react-project-test/static/js/2.a7f3a084.chunk.js",
+    "static/js/2.a7f3a084.chunk.js.map": "/react-project-test/static/js/2.a7f3a084.chunk.js.map",
+    "index.html": "/react-project-test/index.html",
+    "precache-manifest.1eb107987920651d7c0b23fcccbacba7.js": "/react-project-test/precache-manifest.1eb107987920651d7c0b23fcccbacba7.js",
+    "service-worker.js": "/react-project-test/service-worker.js",
+    "static/css/main.21c70db9.chunk.css.map": "/react-project-test/static/css/main.21c70db9.chunk.css.map",
+    "static/js/2.a7f3a084.chunk.js.LICENSE.txt": "/react-project-test/static/js/2.a7f3a084.chunk.js.LICENSE.txt",
+    "static/media/Message.css": "/react-project-test/static/media/like-inactive.a70ab6c3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f937617.js",
+    "static/js/2.a7f3a084.chunk.js",
+    "static/css/main.21c70db9.chunk.css",
+    "static/js/main.9644718a.chunk.js"
+  ]
+}
