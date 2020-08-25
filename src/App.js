@@ -1,26 +1,74 @@
 import React from 'react';
-import logo from './logo.svg';
+import  {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Message from './components/Message';
+import Navigation from "./components/Navigation";
+import Banner from "./components/Banner";
+
+const config = {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+  }
+};
+
+const API = 'https://randomuser.me/api?results=20';
+
+class App extends React.Component {
+constructor(props) {
+  super(props);
+
+  this.state = {
+    userData: []
+  };
+}
+
+componentDidMount() {
+  axios.get(API, config)
+    .then((res) => {
+      this.setState({ userData: res.data.results })
+    });
+}
+
+  render() {
+  const { userData } = this.state;
+    return (
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact>
+            <div className="App">
+              <Banner/>
+              {userData.map(({ name, picture, location, id}, index) => {
+                return (
+                  <Message
+                    name={`${name.first} ${name.last}`}
+                    logo={picture.thumbnail}
+                    title={location.country}
+                    text={location.city}
+                    key={id.value}
+                  />
+                )
+              })}
+            </div>
+          </Route>
+          <Route path="/hello">
+            Hello
+          </Route>
+          <Route path="/signin">
+            Регистратура
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
 }
 
 export default App;
