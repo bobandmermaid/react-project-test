@@ -1,3 +1,8 @@
++ Проба пера на React. Скромный аналог этого приложения => https://react-redux.realworld.io/
++ API взято отсюда => https://www.randomuser.me/
+
+![Image alt](https://github.com/bobandmermaid/react-project-test/raw/master/2020-08-26.jpg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
